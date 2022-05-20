@@ -31,4 +31,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: excitedleigh/setup-nox@v2.1.0
-      - run: nox -s test-${{ matrix.venv_version }}
+      - run: nox -s test-${{ matrix.venv_version }} --error-on-missing-interpreters
