@@ -1,0 +1,44 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "github-actions-experiments"
+dynamic = ["version", "description"]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "d-k-bo", email = "dkbo@mail.de" }]
+classifiers = []
+dependencies = []
+
+    [project.optional-dependencies]
+    test = ["pytest"]
+
+[tool]
+
+    [tool.flit.module]
+    name = "github_actions_experiments"
+
+    [tool.black]
+
+    [tool.isort]
+    profile = "black"
+
+    [tool.mypy]
+    show_error_codes = true
+    warn_unused_ignores = true
+    files = ["github_actions_experiments/", "tests/"]
+
+    [tool.flake8]
+    # pip install pyproject-flake8 flake8-annotations flake8-bugbear flake8-docstrings
+    max-line-length = 88
+    extend-ignore = [
+        "E203",  # whitespace before ‘,’, ‘;’, or ‘:’ (incompatible with PEP8 and black)
+        "E501",  # line too long (to strict, use B950 instead)
+        "ANN10",  # Missing type annotation for self/cls
+    ]
+    extend-select = ["B950"]  # line too long    
+    docstring-convention = "google"  # flake8-docstrings
+    filename = ["github_actions_experiments/", "tests/", "noxfile.py"]
+    per-file-ignores = ["tests/*: D, ANN", "noxfile.py: D, ANN"]
