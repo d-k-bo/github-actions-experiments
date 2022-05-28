@@ -3,7 +3,7 @@ requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "github-actions-experiments"
+name = "V4F5KRv1sZ"
 dynamic = ["version", "description"]
 readme = "README.md"
 requires-python = ">=3.8"
