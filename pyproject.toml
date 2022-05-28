@@ -4,7 +4,8 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "V4F5KRv1sZ"
-dynamic = ["version", "description"]
+version = "0.1.0"
+dynamic = ["description"]
 readme = "README.md"
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
