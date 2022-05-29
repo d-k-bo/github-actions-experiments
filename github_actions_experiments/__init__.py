@@ -1,1 +1,1 @@
-"""None"""
+"""Simple dummy project."""
