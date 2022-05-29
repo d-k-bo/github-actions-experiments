@@ -3,11 +3,11 @@ on:
   push:
     tags: ["v*.*.*"]
 jobs:
-  run-nox:
+  ci:
     uses: ./.github/workflows/run-nox.yml
   publish:
     name: Publish to TestPyPI
-    needs: [check-format, lint, type-check, tests]
+    needs: [ci]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
