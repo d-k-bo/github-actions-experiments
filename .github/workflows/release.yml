@@ -4,7 +4,7 @@ on:
     tags: ["v*.*.*"]
 jobs:
   ci:
-    uses: ./.github/workflows/run-nox.yml
+    uses: ./.github/workflows/ci.yml
   publish:
     name: Publish to TestPyPI
     needs: [ci]
