@@ -3,11 +3,11 @@ on:
   push:
     tags: ["v*.*.*"]
 jobs:
-  ci:
+  CI:
     uses: ./.github/workflows/ci.yml
   publish:
     name: Publish to TestPyPI
-    needs: [ci]
+    needs: [CI]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
