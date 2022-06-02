@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "V4F5KRv1sZ"
-version = "0.2.3"
+version = "0.2.4"
 dynamic = ["description"]
 readme = "README.md"
 requires-python = ">=3.8"
