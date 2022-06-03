@@ -36,11 +36,13 @@ def mypy(session: nox.Session) -> None:
 
 @nox.session(python=["3.8", "3.9", "3.10", "3.11", "pypy3"])
 def test(session: nox.Session):
-    session.install(".[test]", "coverage")
-    try:
-        session.run("coverage", "run", "-m", "pytest")
-    finally:
-        session.run("coverage", "report")
+    session.install("-e", ".[test]")
+    session.run(
+        "pytest",
+        "--cov",
+        "--cov-report=xml",
+        "--cov-report=term",
+    )
 
 
 @nox.session(python=False)

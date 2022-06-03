@@ -1,2 +1,5 @@
+import github_actions_experiments as gae
+
+
 def test_success():
-    pass
+    gae.tested_function()

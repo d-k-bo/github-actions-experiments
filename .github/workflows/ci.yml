@@ -37,3 +37,5 @@ jobs:
         with:
           python-version: "3.11-dev"
       - run: nox -s test-${{ matrix.venv_version }} --error-on-missing-interpreters
+      - name: "Upload coverage to Codecov"
+        uses: codecov/codecov-action@v2

@@ -14,7 +14,7 @@ classifiers = []
 dependencies = []
 
     [project.optional-dependencies]
-    test = ["pytest"]
+    test = ["pytest", "pytest-cov"]
 
 [tool]
 
@@ -25,6 +25,20 @@ dependencies = []
 
     [tool.isort]
     profile = "black"
+
+    [tool.pytest]
+
+        [tool.pytest.ini_options]
+        addopts = "--tb=short"
+        testpaths = "tests"
+
+    [tool.coverage]
+
+        [tool.coverage.run]
+        omit = ["noxfile.py"]
+
+        [tool.coverage.report]
+        show_missing = true
 
     [tool.mypy]
     show_error_codes = true
