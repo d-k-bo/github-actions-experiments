@@ -1,0 +1,29 @@
+name: Installed Software
+
+on: [push]
+
+jobs:
+  rustup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: rustup --version
+  cargo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cargo --version
+  meson:
+    runs-on: ubuntu-latest
+    steps:
+      - run: meson --version
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - run: python --version
+  pip:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip --version
+  pipx:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pipx --version
