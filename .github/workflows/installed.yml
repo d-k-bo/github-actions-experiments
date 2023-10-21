@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: python --version
+      - run: ls /usr/bin/python*
   pip:
     runs-on: ubuntu-latest
     steps:
